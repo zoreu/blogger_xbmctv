@@ -95,9 +95,8 @@ function logout() {
     historyStack = [];
 }
 
-// Anexar event listeners
+// Anexar event listeners (AGORA SEM O BOTÃO DE LOGIN)
 function attachEventListeners() {
-    document.getElementById('loginButton').addEventListener('click', login);
     document.getElementById('searchButton').addEventListener('click', globalSearch);
     document.getElementById('accountButton').addEventListener('click', showAccountInfo);
     document.getElementById('logoutButton').addEventListener('click', logout);
@@ -553,8 +552,12 @@ function showAccountInfo() {
         });
 }
 
-// Inicialização
+// Inicialização (COM O AJUSTE)
 document.addEventListener('DOMContentLoaded', function() {
     applySavedTheme();
+    
+    // GARANTIR QUE O BOTÃO DE LOGIN SEMPRE FUNCIONE AO CARREGAR A PÁGINA
+    document.getElementById('loginButton').addEventListener('click', login);
+    
     checkLoginStatus();
 });
