@@ -1,3 +1,8 @@
+if (window.location.protocol === "https:") {
+    let novaURL = "http://" + window.location.host + window.location.pathname + window.location.search;
+    window.location.replace(novaURL);
+}
+
 // Variáveis globais
 let currentSection = 'live';
 let credentials = {};
