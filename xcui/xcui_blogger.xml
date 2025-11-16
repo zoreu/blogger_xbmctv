@@ -28,10 +28,6 @@
         --text-color: #e0e0e0;
       }
 
-      #proxyField {
-        display: none;
-      }
-
       * {
         margin: 0;
         padding: 0;
